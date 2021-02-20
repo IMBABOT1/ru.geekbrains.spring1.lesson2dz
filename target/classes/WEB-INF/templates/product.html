@@ -14,6 +14,7 @@
         <th scope="col">ID</th>
         <th scope="col">Title</th>
         <th scope="col">Cost</th>
+        <th scope="col">Action</th>
     </tr>
     </thead>
     <tbody>
@@ -21,6 +22,9 @@
         <th th:text="${p.id}"/>I
         <th th:text="${p.title}"/>
         <th th:text="${p.cost}"/>
+        <td>
+            <a class="btn btn-danger" th:href="@{'/remove_product/' + ${p.id}}">Удалить</a>
+        </td>
     </tr>
     </tbody>
 </table>

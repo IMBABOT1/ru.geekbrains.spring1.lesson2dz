@@ -1,9 +1,9 @@
 package ru.geekbrains.spring1.Model;
 
 public class Product {
-    private long id;
+    private Long id;
     private String title;
-    private long cost;
+    private Long cost;
 
     public long getId() {
         return id;
