@@ -31,11 +31,7 @@ public class ProductRepository {
         return list.get(id);
     }
 
-    public void deleteById(int id){
-        for (Product p : list){
-            if (p.getId() == id){
-                list.remove(id);
-            }
-        }
+    public void save(Product product){
+        list.add(product);
     }
 }

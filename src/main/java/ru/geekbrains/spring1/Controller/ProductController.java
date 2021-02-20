@@ -4,10 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import ru.geekbrains.spring1.Model.Product;
 import ru.geekbrains.spring1.Service.ProductService;
-
-import javax.swing.*;
 import java.util.List;
 
 @Controller
@@ -25,5 +24,12 @@ public class ProductController {
         List<Product> products = productService.getAll();
         model.addAttribute("products", products);
         return "product";
+    }
+
+    @GetMapping("/add_product")
+    public String addProduct(@RequestParam long id, @RequestParam String title, @RequestParam long cost){
+        Product product = new Product(id, title, cost);
+        productService.addProduct(product);
+        return "redirect:/get_products";
     }
 }
