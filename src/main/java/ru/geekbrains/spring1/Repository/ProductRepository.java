@@ -38,4 +38,8 @@ public class ProductRepository {
     public void deleteById(Long id){
         list.removeIf(product -> product.getId() == id);
     }
+
+    public boolean isEmpty(){
+        return list.size() == 0;
+    }
 }

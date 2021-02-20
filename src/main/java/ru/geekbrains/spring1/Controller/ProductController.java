@@ -39,4 +39,5 @@ public class ProductController {
         productService.deleteByID(id);
         return "redirect:/get_products";
     }
+
 }
