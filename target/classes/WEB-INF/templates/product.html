@@ -21,10 +21,10 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <th th:text="${products.get(0).id}"/>I
-        <th th:text="${products.get(0).title}"/>
-        <th th:text="${products.get(0).cost}"/>
+    <tr th:each="p:${products}">
+        <th th:text="${p.id}"/>I
+        <th th:text="${p.title}"/>
+        <th th:text="${p.cost}"/>
     </tr>
 
     </tbody>
