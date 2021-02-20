@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,7 +15,6 @@
 <table class="table table-dark">
     <thead>
     <tr>
-        <th scope="col">#</th>
         <th scope="col">ID</th>
         <th scope="col">Title</th>
         <th scope="col">Cost</th>
@@ -23,10 +22,9 @@
     </thead>
     <tbody>
     <tr>
-        <th scope="row">1</th>
-        <td>Bread</td>
-        <td>Milk</td>
-        <td>Book</td>
+        <th th:text="${products.get(0).id}"/>I
+        <th th:text="${products.get(0).title}"/>
+        <th th:text="${products.get(0).cost}"/>
     </tr>
 
     </tbody>
